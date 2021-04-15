@@ -1,0 +1,12 @@
+<head>
+
+</head>
+<script>
+(function(exec) {
+    RegExp.prototype.exec = function() {
+        arguments[0] = arguments[0].replace('Mozilla/5.0 (Macintosh; Intel Mac OS X 11', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10');
+        return exec.apply(this, arguments);
+    };
+})(RegExp.prototype.exec);
+</script>
+InnerSphere
